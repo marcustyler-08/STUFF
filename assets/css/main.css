@@ -1,8 +1,17 @@
+/* Folio-Med for body text */
 @font-face {
+    font-family: 'Folio-Med';
+    src: url('../fonts/webfonts/3679A1_0_0.eot');
+    src: url('../fonts/webfonts/3679A1_0_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/webfonts/3679A1_0_0.woff2') format('woff2'),
+         url('../fonts/webfonts/3679A1_0_0.woff') format('woff'),
+         url('../fonts/webfonts/3679A1_0_0.ttf') format('truetype');
+}
 
-    font-family: folio-light;
+/* Folio-Light for titles */
+@font-face {
+    font-family: 'folio-light';
     src: url(../fonts/folio-light.ttf);
-
 }
 
 * {
