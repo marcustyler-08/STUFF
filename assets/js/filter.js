@@ -9,13 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
       
       if (filterTag === 'show-all') {
         articles.forEach(article => {
-          article.style.display = 'inline-block';
+          article.style.display = 'flex';
         });
       } else {
         articles.forEach(article => {
           const articleTags = article.getAttribute('data-tags');
-          if (articleTags.includes(filterTag)) {
-            article.style.display = 'inline-block';
+          if (articleTags && articleTags.includes(filterTag)) {
+            article.style.display = 'flex';
           } else {
             article.style.display = 'none';
           }
