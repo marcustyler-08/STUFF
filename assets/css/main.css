@@ -14,56 +14,44 @@
     src: url(../fonts/folio-light.ttf);
 }
 
+/* Reset */
 * {
-
 	margin: 0;
 	padding: 0;
 	font-size: 1em;
 	font-weight: normal;
 	color: black;
 	text-decoration: none;
-	list-style-type: none;
 	list-style: none;
-
 }
 
 *::-webkit-scrollbar { 
-
 	width: 0;
-
 }
 
 *::selection {
-
     background: #D2E4FF;
-
 }
 
+/* Base Typography */
 body {
-
 	font-size: 2vw;
-	font-family: "Folio-Med";
-	line-height: 1.25em;
-
+	font-family: "Folio-Med", sans-serif;
+	line-height: 1.5em;
 }
 
 ul {
-
     padding-bottom: 1em; 
-
 }
 
 sup {
-
 	line-height: 0;
 	font-size: 0.75em;
-
 }
 
+/* Left Sidebar */
 #left {
-
-	padding-top: 1.2em;
-	padding-left: 1.2em;
+	padding: 1.2em;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -71,28 +59,22 @@ sup {
 	width: 25vw;
 	background: white;
 	overflow-y: scroll;
-
 }
 
-
 #left > a:last-of-type {
-
 	padding-bottom: 4.5em;
-
 }
 
 #matter {
-
 	padding-bottom: 1em;
-
+	font-weight: bold;
 }
 
+/* Right Content Area */
 #right {
-
 	display: grid;
-	grid-template-columns: 25vw 25vw 25vw;
-	grid-template-rows: 25vw 25vw 25vw;
-	grid-gap: 0px;
+	grid-template-columns: repeat(3, 25vw);
+	grid-auto-rows: 25vw;
 	position: fixed;
 	left: 25vw;
 	top: 0;
@@ -101,11 +83,9 @@ sup {
 	border-left: 2px solid black;
 	background: white;
 	overflow-y: scroll;
-
 }
 
 .right-body {
-
 	position: fixed;
 	left: 25vw;
 	top: 0;
@@ -114,180 +94,167 @@ sup {
 	border-left: 2px solid black;
 	background: white;
 	overflow-y: scroll;
-
+	padding-bottom: 3em;
 }
 
-.full {
-
-	width: 100%;
-
-}
-
-.footnote {
-
-	padding-top: 1em;
-
-}
-
-.footnote > p {
-
-	text-indent: -1.5em;
-	padding-left: 1.5em;
-
-}
-
-.key {
-
-	display: inline-block;
-	height: 0.6em;
-	width: 0.6em;
-	margin-left: 0.35em;
-	background-color: white;
-	visibility: hidden;
-
-}
-
-#next {
-
-	display: grid;
-	grid-template-columns: 25vw 25vw 25vw;
-	grid-gap: 0px;
-	position: relative;
-	border-top: 2px solid black;
-	background-color: white;
-
-}
-
-.title {
-
-	display: inline-block;
-	position: relative;
-	width: 75vw;
-
-}
-
-h1 {
-
-	position: relative;
-	left: 50%;
-	transform: translate(-50%);
-	width: 65%;
-	padding-top: 1em;
-	padding-bottom: 0em;
-	font-family: folio-light;
-	font-size: 3vw;
-	font-weight: bold;
-	line-height: 1.3em;
-	text-align: center;
-	text-transform: uppercase;
-
-}
-
-h2 {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 65%;
-    padding-bottom: 1em;
-    font-size: 2vw;
-    text-align: center;
-}
-
-h2 + h2 {
-
-	padding-top: 0em;
-
-}
-
-.body {
-
-	display: inline-block;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%);
-	width: 75%;
-
-}
-
-.body > p {
-
-	text-indent: 2.4em;
-
-}
-
-.body > h2 { 
-
-	font-weight: normal;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	text-align: center;
-
-}
-
-.body > h2 + p {
-
-	text-indent: 0px;
-
-}
-
-.indent-entire {
-
-	padding-left: 2.4em;
-
-}
-
-p + .indent-entire {
-
-	padding-top: 1em;
-	padding-bottom: 1em;
-
-}
-
+/* Article Grid Items */
 .article {
-
-	display: inline-block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	position: relative;
 	width: 25vw;
 	height: 25vw;
 	border-right: 2px solid black;
 	border-bottom: 2px solid black;
-
+	transition: background-color 0.2s ease;
 }
 
-.article:last-of-type {
-
-	margin-bottom: 1.3em;
-
+.article:hover {
+	background-color: #f5f5f5;
 }
 
-#next {
-
-	margin-top: 3em;
-
-}
-
-.article > * {
-
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100%;
+.article > p {
+	width: 80%;
 	text-align: center;
-
 }
 
-#images-im-google > img {
+/* Article Page Layout */
+.title {
+	width: 100%;
+	padding: 2em 0;
+}
 
-	width: 27%;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
-	padding-bottom: 1em;
+h1 {
+	width: 65%;
+	margin: 0 auto;
+	padding-top: 1em;
+	font-family: 'folio-light', sans-serif;
+	font-size: 3vw;
+	font-weight: bold;
+	line-height: 1.3em;
+	text-align: center;
+	text-transform: uppercase;
+}
 
+h2 {
+	width: 65%;
+	margin: 0 auto;
+	padding: 0.5em 0 1em;
+	font-size: 1.5vw;
+	font-weight: normal;
+	text-align: center;
+}
+
+/* Article Body Content */
+.body {
+	width: 75%;
+	max-width: 800px;
+	margin: 0 auto;
+	padding-bottom: 3em;
+}
+
+.body > p {
+	margin-bottom: 1em;
+	text-indent: 0;
+	line-height: 1.6em;
+}
+
+.body > h2 { 
+	width: 100%;
+	margin: 2em auto 1em;
+	font-weight: bold;
+	font-size: 1.8vw;
+	text-align: center;
+}
+
+.body > h3 {
+	margin: 1.5em 0 0.5em;
+	font-weight: bold;
+	font-size: 1.3vw;
+}
+
+/* Footnotes */
+.footnote {
+	padding-top: 2em;
+	margin-top: 2em;
+	border-top: 1px solid #ddd;
+	font-size: 0.9em;
+}
+
+.footnote > p {
+	text-indent: -1.5em;
+	padding-left: 1.5em;
+}
+
+/* Next Article Section */
+#next {
+	display: grid;
+	grid-template-columns: repeat(3, 25vw);
+	border-top: 2px solid black;
+	margin-top: 3em;
+}
+
+/* Links */
+a {
+	color: black;
+	transition: opacity 0.2s ease;
+}
+
+#left a:hover {
+	opacity: 0.6;
 }
 
 .red {
-
 	color: red;
+}
 
+.red:hover {
+	opacity: 0.8;
+}
+
+/* Utility Classes */
+.full {
+	width: 100%;
+}
+
+/* Removed obsolete .key class since you're not using colored dots anymore */
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+	body {
+		font-size: 3vw;
+	}
+	
+	#left {
+		width: 100%;
+		position: relative;
+		height: auto;
+	}
+	
+	#right,
+	.right-body {
+		left: 0;
+		width: 100%;
+		position: relative;
+		border-left: none;
+	}
+	
+	#right {
+		grid-template-columns: 1fr;
+		grid-auto-rows: 50vw;
+	}
+	
+	.article {
+		width: 100%;
+		height: 50vw;
+	}
+	
+	h1 {
+		font-size: 6vw;
+	}
+	
+	h2 {
+		font-size: 4vw;
+	}
 }
