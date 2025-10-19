@@ -1,0 +1,37 @@
+/* Remove the age-based opacity classes: */
+.one > * {
+	opacity: 1;
+}
+
+.two > * {
+	opacity: 1;  /* Changed from 0.7 */
+}
+
+.three > * {
+	opacity: 1;  /* Changed from 0.4 */
+}
+
+/* Remove the bottom bar styles: */
+#bar {
+	position: fixed;
+	z-index: 1;
+	bottom: 0px;
+	left: 0px;
+	width: 100vw;
+	padding: 0.5em 1.2em 0.4em 1.2em;
+	border-top: 2px black solid;
+	background: white;
+}
+
+#bar-text {
+	position: relative;
+}
+
+#save > a {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	padding: 0.5em 1.2em 0.4em 1.2em;
+	background: white;
+	border-left: 2px solid black; 
+}
