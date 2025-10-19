@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   const articles = document.querySelectorAll('.article');
-  const filterLinks = document.querySelectorAll('[data-tags]');
+  const filterLinks = document.querySelectorAll('#left [data-tags]');
 
   filterLinks.forEach(link => {
     link.addEventListener('click', function(e) {
