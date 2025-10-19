@@ -1,8 +1,0 @@
-title: STUFF
-description: A blog about things I find interesting
-url: "https://marcustyler-08.github.io"
-baseurl: "/STUFF"
-markdown: kramdown
-collections:
-  posts:
-    output: true
