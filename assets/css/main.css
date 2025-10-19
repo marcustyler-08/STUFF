@@ -183,6 +183,16 @@ h1 {
 
 }
 
+h2 {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 65%;
+    padding-bottom: 1em;
+    font-size: 2vw;
+    text-align: center;
+}
+
 h2 + h2 {
 
 	padding-top: 0em;
