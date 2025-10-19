@@ -1,0 +1,20 @@
+title: STUFF
+description: A blog about things I find interesting
+url: "https://marcustyler-08.github.io"
+baseurl: "/STUFF"
+
+# Build settings
+markdown: kramdown
+permalink: /articles/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /articles/:title/
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
