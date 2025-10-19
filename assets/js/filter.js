@@ -10,8 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // If not on homepage, go to homepage with the filter tag
       if (!isHomepage) {
-        const baseUrl = window.location.origin + window.location.pathname.split('/').slice(0, -2).join('/') + '/';
-        window.location.href = baseUrl + '?filter=' + filterTag;
+        window.location.href = '/STUFF/?filter=' + filterTag;
         return;
       }
       
