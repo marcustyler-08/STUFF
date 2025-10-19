@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<div class="right-body">
+  <div class="title">
+    <h1>{{ page.title }}</h1>
+    {% if page.author %}
+    <h2>{{ page.author }}</h2>
+    {% endif %}
+  </div>
+  
+  <div class="body">
+    {{ content }}
+  </div>
+
+  <div id="next">
+    {% assign current_found = false %}
+    {% for post in site.posts reversed %}
+      {% if current_found %}
+        <a class="article" href="{{ post.url | relative_url }}">
+          <p>{{ post.title }}</p>
+        </a>
+        {% break %}
+      {% endif %}
+      {% if post.id == page.id %}
+        {% assign current_found = true %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
